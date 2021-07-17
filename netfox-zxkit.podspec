@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 s.name = 'netfox-zxkit'
 s.swift_version = '5.0'
-s.version = '0.0.4'
+s.version = '0.0.5'
 s.license= { :type => "Apache-2.0", :file => "LICENSE" }
 s.summary = 'a quick look on all executed network requests performed by netfox'
 s.homepage = 'https://github.com/ZXKitCode/netfox-zxkit'
