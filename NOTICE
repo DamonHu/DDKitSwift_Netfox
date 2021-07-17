@@ -1,4 +1,4 @@
-ZXKit-code/core
+ZXKitCode/netfox-zxkit
 
 Copyright 2021 ZXKit and contributors.
 All rights reserved.
@@ -7,3 +7,16 @@ This product includes software developed at
 ZXKit (https://zxkit.com/).
 
 This distribution has a binary dependency on zxkit/core, which is available under the Apache-2.0 License. The source code of zxkit/core can be found at https://github.com/zxkit-code/core.
+
+====================================
+
+ZXKitCode/core
+
+The source code of zxkit/core can be found at https://github.com/ZXKitCode/core
+
+====================================
+
+kasketis/netfox
+
+The source code of zxkit/core can be found at https://github.com/kasketis/netfox
+
