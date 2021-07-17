@@ -1,0 +1,32 @@
+PODS:
+  - netfox (1.19.0)
+  - SnapKit (5.0.1)
+  - ZXKitCore (0.1.5):
+    - ZXKitCore/core (= 0.1.5)
+  - ZXKitCore/core (0.1.5):
+    - SnapKit
+    - ZXKitUtil
+  - ZXKitUtil (3.0.1):
+    - ZXKitUtil/core (= 3.0.1)
+  - ZXKitUtil/core (3.0.1)
+
+DEPENDENCIES:
+  - netfox
+  - ZXKitCore
+
+SPEC REPOS:
+  trunk:
+    - netfox
+    - SnapKit
+    - ZXKitCore
+    - ZXKitUtil
+
+SPEC CHECKSUMS:
+  netfox: efeec1d23406df6cd605212f09a40957bb5654eb
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  ZXKitCore: 51a3cdf16252e8e023c7bcc6d52b3d251faaed3c
+  ZXKitUtil: 7f8782b19f1696fe259d07f4048196be5f2ea6b7
+
+PODFILE CHECKSUM: 8b52ac7ae2b29fc3ba9e96de382c47754e538d0f
+
+COCOAPODS: 1.10.1

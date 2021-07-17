@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-netfox-zxkit/Pods-netfox-zxkit-frameworks.sh
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/ZXKitCore/ZXKitCore.framework
+${BUILT_PRODUCTS_DIR}/ZXKitUtil/ZXKitUtil.framework
+${BUILT_PRODUCTS_DIR}/netfox/netfox.framework
