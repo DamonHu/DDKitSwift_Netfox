@@ -32,7 +32,13 @@ open class NetFoxZXKit: ZXKitPluginProtocol {
     }
     
     public func start() {
-        NFX.sharedInstance().show()
+        ZXKit.hide()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if !self.isRunning {
+                NFX.sharedInstance().start()
+            }
+            NFX.sharedInstance().show()
+        }
     }
     
     public var pluginIdentifier: String {
@@ -52,11 +58,17 @@ open class NetFoxZXKit: ZXKitPluginProtocol {
     }
 
     public var isRunning: Bool {
-        return true
+        return NFX.sharedInstance().isStarted()
     }
 
     public func stop() {
-        NFX.sharedInstance().hide()
+        ZXKit.hide()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if !self.isRunning {
+                NFX.sharedInstance().start()
+            }
+            NFX.sharedInstance().show()
+        }
     }
 
 
