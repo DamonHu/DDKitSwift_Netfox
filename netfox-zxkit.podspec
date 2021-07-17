@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
-s.name = 'netfox/zxkit'
+s.name = 'netfox-zxkit'
 s.swift_version = '5.0'
-s.version = '0.0.1'
+s.version = '0.0.2'
 s.license= { :type => "Apache-2.0", :file => "LICENSE" }
 s.summary = 'a quick look on all executed network requests performed by netfox'
 s.homepage = 'https://github.com/ZXKitCode/netfox-zxkit'
@@ -14,6 +14,6 @@ s.resource_bundles = {
 }
 s.source_files = "pod/zxkit/*.swift"
 s.dependency 'netfox'
-s.dependency 'ZXKitCore/core'
+s.dependency 'ZXKitCore'
 s.documentation_url = 'https://blog.hudongdong.com/ios/1169.html'
 end
