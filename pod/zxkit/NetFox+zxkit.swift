@@ -25,13 +25,13 @@ extension String{
     }
 }
 
-class NetFoxZXKit: ZXKitPluginProtocol {
-    init() {
+open class NetFoxZXKit: ZXKitPluginProtocol {
+    public init() {
         NFX.sharedInstance().setGesture(.custom)
         NFX.sharedInstance().start()
     }
     
-    func start() {
+    public func start() {
         NFX.sharedInstance().show()
     }
     
