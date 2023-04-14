@@ -11,7 +11,7 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>SnapKit.xcscheme</key>
+		<key>SSZipArchive.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,12 +32,26 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>ZXKitUtil.xcscheme</key>
+		<key>ZXKitLogger-ZXKitLogger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
+		<key>ZXKitLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
+		</dict>
+		<key>ZXKitUtil.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>7</integer>
 		</dict>
 		<key>netfox.xcscheme</key>
 		<dict>

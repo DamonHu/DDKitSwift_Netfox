@@ -18,14 +18,12 @@ class ZXKitCollectionViewHeaderView: UICollectionViewCell {
     }
 
     func createUI() {
-//        self.contentView.backgroundColor = UIColor(displayP3Red: 112.0/255.0, green: 161.0/255.0, blue: 255.0/255.0, alpha: 1.0)
-        self.contentView.backgroundColor = UIColor.zx.color(hexValue: 0x5dae8b)
+        self.contentView.backgroundColor = ZXKit.UIConfig.collectionViewTitleBackgroundColor
         self.contentView.addSubview(mTitleLabel)
-        mTitleLabel.snp.makeConstraints {
-            $0.left.equalToSuperview().offset(20)
-            $0.right.equalToSuperview().offset(-20)
-            $0.centerY.equalToSuperview()
-        }
+
+        mTitleLabel.leftAnchor.constraint(equalTo: self.contentView.leftAnchor, constant: 20).isActive = true
+        mTitleLabel.rightAnchor.constraint(equalTo: self.contentView.rightAnchor, constant: -20).isActive = true
+        mTitleLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
     }
 
     func updateUI(title: String) {
@@ -35,10 +33,11 @@ class ZXKitCollectionViewHeaderView: UICollectionViewCell {
     //MARK: UI
     lazy var mTitleLabel: UILabel = {
         let tLabel = UILabel()
+        tLabel.translatesAutoresizingMaskIntoConstraints = false
         tLabel.numberOfLines = 2
         tLabel.textAlignment = .left
         tLabel.font = .systemFont(ofSize: 18, weight: .medium)
-        tLabel.textColor = UIColor.zx.color(hexValue: 0xffffff)
+        tLabel.textColor = ZXKit.UIConfig.collectionViewTitleColor
         return tLabel
     }()
 }

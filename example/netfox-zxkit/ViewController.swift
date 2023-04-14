@@ -42,7 +42,6 @@ class ViewController: UIViewController {
 extension ViewController {
     @objc func _show() {
         ZXKit.show()
-        print(ZXKitUtil.shared.getFileDirectory(type: .documents))
     }
     
     @objc func _request() {

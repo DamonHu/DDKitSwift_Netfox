@@ -6,6 +6,6 @@ target 'netfox-zxkit' do
   use_frameworks!
 
   # Pods for netfox-zxkit
-  pod 'netfox'
-  pod 'ZXKitCore'
+  pod 'netfox', '~> 1.21.0'
+  pod 'ZXKitCore', '~> 2.0.0'
 end

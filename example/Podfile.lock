@@ -1,32 +1,39 @@
 PODS:
   - netfox (1.21.0)
-  - SnapKit (5.0.1)
-  - ZXKitCore (0.1.5):
-    - ZXKitCore/core (= 0.1.5)
-  - ZXKitCore/core (0.1.5):
-    - SnapKit
+  - SSZipArchive (2.4.3)
+  - ZXKitCore (2.0.2):
+    - ZXKitCore/core (= 2.0.2)
+  - ZXKitCore/core (2.0.2):
+    - SSZipArchive
+    - ZXKitLogger (~> 4.0.0)
     - ZXKitUtil
-  - ZXKitUtil (3.2.4):
-    - ZXKitUtil/core (= 3.2.4)
-  - ZXKitUtil/core (3.2.4)
+  - ZXKitLogger (4.0.5):
+    - ZXKitLogger/core (= 4.0.5)
+  - ZXKitLogger/core (4.0.5):
+    - ZXKitUtil (~> 4.0.0)
+  - ZXKitUtil (4.0.0):
+    - ZXKitUtil/core (= 4.0.0)
+  - ZXKitUtil/core (4.0.0)
 
 DEPENDENCIES:
-  - netfox
-  - ZXKitCore
+  - netfox (~> 1.21.0)
+  - ZXKitCore (~> 2.0.0)
 
 SPEC REPOS:
   trunk:
     - netfox
-    - SnapKit
+    - SSZipArchive
     - ZXKitCore
+    - ZXKitLogger
     - ZXKitUtil
 
 SPEC CHECKSUMS:
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
-  ZXKitCore: 51a3cdf16252e8e023c7bcc6d52b3d251faaed3c
-  ZXKitUtil: f44e73f0a06f5cacecd6d138e295e0dd530eb055
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  ZXKitCore: 7a67edfda54439ae7d81bbb40cd990f1c09bad2f
+  ZXKitLogger: 22f226509df679728bc8da7a7983d672cc9ccbae
+  ZXKitUtil: 0d23a979cdc7a7f9df0722148a613986ef007288
 
-PODFILE CHECKSUM: 8b52ac7ae2b29fc3ba9e96de382c47754e538d0f
+PODFILE CHECKSUM: a3053aa19941ffbde4e9953a46524f1b8d21a1a1
 
 COCOAPODS: 1.11.2
