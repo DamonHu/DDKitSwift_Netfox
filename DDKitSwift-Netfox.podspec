@@ -15,5 +15,5 @@ s.resource_bundles = {
 s.source_files = "pod/*.swift"
 s.dependency 'netfox', '1.21.0'
 s.dependency 'DDKitSwift/core', '~> 3.0.0'
-s.documentation_url = 'https://blog.hudongdong.com/ios/1169.html'
+s.documentation_url = 'https://github.com/ZXKitCode/DDKitSwift-Netfox'
 end
