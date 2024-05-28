@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5C350C6EDAB185BD9B5DE98D5E1E9023"
+               BlueprintIdentifier = "8A91DEAC627B04202610D5C35D4B7FB7"
                BuildableName = "Pods_DDKitSwift_Netfox.framework"
-               BlueprintName = "Pods-DDKitSwift-Netfox"
+               BlueprintName = "Pods-DDKitSwift_Netfox"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

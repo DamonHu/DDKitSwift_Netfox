@@ -1,5 +1,5 @@
 framework module Pods_DDKitSwift_Netfox {
-  umbrella header "Pods-DDKitSwift-Netfox-umbrella.h"
+  umbrella header "Pods-DDKitSwift_Netfox-umbrella.h"
 
   export *
   module * { export * }

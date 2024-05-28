@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'DDKitSwift-Netfox' do
+target 'DDKitSwift_Netfox' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for DDKitSwift-Netfox
+  # Pods for DDKitSwift_Netfox
   pod 'netfox', '~> 1.21.0'
   pod 'DDKitSwift/core', '~> 3.0.0'
 end

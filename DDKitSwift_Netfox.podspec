@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-s.name = 'DDKitSwift-Netfox'
+s.name = 'DDKitSwift_Netfox'
 s.swift_version = '5.0'
-s.version = '3.0.0'
+s.version = '3.0.1'
 s.license= { :type => "MIT", :file => "LICENSE" }
 s.summary = 'a quick look on all executed network requests performed by netfox'
-s.homepage = 'https://github.com/DamonHu/DDKitSwift-Netfox'
+s.homepage = 'https://github.com/DamonHu/DDKitSwift_Netfox'
 s.authors = { 'ZXKitCode' => 'dong765@qq.com' }
-s.source = { :git => "https://github.com/DamonHu/DDKitSwift-Netfox.git", :tag => s.version}
+s.source = { :git => "https://github.com/DamonHu/DDKitSwift_Netfox.git", :tag => s.version}
 s.requires_arc = true
 s.ios.deployment_target = '11.0'
 s.resource_bundles = {
@@ -15,5 +15,5 @@ s.resource_bundles = {
 s.source_files = "pod/*.swift"
 s.dependency 'netfox', '1.21.0'
 s.dependency 'DDKitSwift/core', '~> 3.0.0'
-s.documentation_url = 'https://github.com/ZXKitCode/DDKitSwift-Netfox'
+s.documentation_url = 'https://github.com/DamonHu/DDKitSwift_Netfox'
 end
