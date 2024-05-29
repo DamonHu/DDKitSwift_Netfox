@@ -14,7 +14,7 @@
 		E4ADD4D526A29C38000BD07F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ADD4D326A29C38000BD07F /* Main.storyboard */; };
 		E4ADD4D726A29C3B000BD07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4ADD4D626A29C3B000BD07F /* Assets.xcassets */; };
 		E4ADD4DA26A29C3B000BD07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4ADD4D826A29C3B000BD07F /* LaunchScreen.storyboard */; };
-		E4ADD4E426A29E75000BD07F /* NetFox+DDKitSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD4E326A29E75000BD07F /* NetFox+DDKitSwift.swift */; };
+		E4ADD4E426A29E75000BD07F /* DDKitSwift_Netfox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADD4E326A29E75000BD07F /* DDKitSwift_Netfox.swift */; };
 		E4ADD4E726A2A077000BD07F /* netfox_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E4ADD4E626A2A077000BD07F /* netfox_logo.png */; };
 		E4ADD4EC26A2A1CA000BD07F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E4ADD4E926A2A1C9000BD07F /* Localizable.strings */; };
 /* End PBXBuildFile section */
@@ -34,7 +34,7 @@
 		E4ADD4D626A29C3B000BD07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4ADD4D926A29C3B000BD07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4ADD4DB26A29C3B000BD07F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E4ADD4E326A29E75000BD07F /* NetFox+DDKitSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetFox+DDKitSwift.swift"; sourceTree = "<group>"; };
+		E4ADD4E326A29E75000BD07F /* DDKitSwift_Netfox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDKitSwift_Netfox.swift; sourceTree = "<group>"; };
 		E4ADD4E626A2A077000BD07F /* netfox_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = netfox_logo.png; sourceTree = "<group>"; };
 		E4ADD4EA26A2A1C9000BD07F /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		E4ADD4EB26A2A1CA000BD07F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		E4ADD4E126A29E3F000BD07F /* pod */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADD4E326A29E75000BD07F /* NetFox+DDKitSwift.swift */,
+				E4ADD4E326A29E75000BD07F /* DDKitSwift_Netfox.swift */,
 				E4ADD4E526A29E81000BD07F /* assets */,
 			);
 			name = pod;
@@ -253,7 +253,7 @@
 			files = (
 				E4ADD4D226A29C38000BD07F /* ViewController.swift in Sources */,
 				E4ADD4CE26A29C38000BD07F /* AppDelegate.swift in Sources */,
-				E4ADD4E426A29E75000BD07F /* NetFox+DDKitSwift.swift in Sources */,
+				E4ADD4E426A29E75000BD07F /* DDKitSwift_Netfox.swift in Sources */,
 				E4ADD4D026A29C38000BD07F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,7 @@ import DDKitSwift
 import DDUtils
 
 class ViewController: UIViewController {
-    let fox = NetFoxZXKit()
+    let fox = DDKitSwift_Netfox()
     override func viewDidLoad() {
         super.viewDidLoad()
         DDKitSwift.regist(plugin: fox)
