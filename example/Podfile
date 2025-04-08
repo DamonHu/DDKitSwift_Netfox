@@ -6,6 +6,6 @@ target 'DDKitSwift_Netfox' do
   use_frameworks!
 
   # Pods for DDKitSwift_Netfox
-  pod 'netfox', '~> 1.21.0'
-  pod 'DDKitSwift/core', '~> 3'
+  pod 'netfox', '~> 1'
+  pod 'DDKitSwift/core', '~> 4'
 end

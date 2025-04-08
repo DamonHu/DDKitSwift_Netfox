@@ -1,23 +1,23 @@
 PODS:
-  - DDKitSwift/core (3.0.0):
-    - DDLoggerSwift (~> 5.0.0)
-    - DDUtils/ui (~> 5.0.0)
-    - DDUtils/utils (~> 5.0.0)
-  - DDLoggerSwift (5.0.0):
-    - DDLoggerSwift/core (= 5.0.0)
-  - DDLoggerSwift/core (5.0.0):
-    - DDUtils/ui (~> 5.0.0)
-    - DDUtils/utils (~> 5.0.0)
-  - DDUtils/core (5.0.2)
-  - DDUtils/ui (5.0.2):
+  - DDKitSwift/core (4.0.0):
+    - DDLoggerSwift (~> 5)
+    - DDUtils/ui (~> 5)
+    - DDUtils/utils (~> 5)
+  - DDLoggerSwift (5.3.1):
+    - DDLoggerSwift/core (= 5.3.1)
+  - DDLoggerSwift/core (5.3.1):
+    - DDUtils/ui (~> 5)
+    - DDUtils/utils (~> 5)
+  - DDUtils/core (5.0.13)
+  - DDUtils/ui (5.0.13):
     - DDUtils/core
-  - DDUtils/utils (5.0.2):
+  - DDUtils/utils (5.0.13):
     - DDUtils/core
   - netfox (1.21.0)
 
 DEPENDENCIES:
-  - DDKitSwift/core (~> 3.0.0)
-  - netfox (~> 1.21.0)
+  - DDKitSwift/core (~> 4)
+  - netfox (~> 1)
 
 SPEC REPOS:
   trunk:
@@ -27,11 +27,11 @@ SPEC REPOS:
     - netfox
 
 SPEC CHECKSUMS:
-  DDKitSwift: 3143fa7df258879898f08e16f2b59b1227661541
-  DDLoggerSwift: 3b6e451251ae07a6614d93493b7c4e512e155950
-  DDUtils: 56b14d305b574751a3e5336717a6dfd56dd2c58c
+  DDKitSwift: a598e532242452a1edf78b9cbfa5a9452cdce3d8
+  DDLoggerSwift: c7c8776b2e56c741ef3c3de8cfaa3eadb2fcf813
+  DDUtils: 9d1dab6514cbe6687348bde7ea0f6f2187b55222
   netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
 
-PODFILE CHECKSUM: 8ab6561c69055934080fee1e09d26f785d31b497
+PODFILE CHECKSUM: e6e5486b259ec9d8fb6e6440d2e9929794cea113
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

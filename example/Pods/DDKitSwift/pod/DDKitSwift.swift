@@ -11,7 +11,7 @@ import DDLoggerSwift
 
 extension String{
     var ZXLocaleString: String {
-        guard let bundlePath = Bundle(for: DDKitSwift.self).path(forResource: "DDKitSwiftCore", ofType: "bundle") else { return NSLocalizedString(self, comment: "") }
+        guard let bundlePath = Bundle(for: DDKitSwift.self).path(forResource: "DDKitSwift", ofType: "bundle") else { return NSLocalizedString(self, comment: "") }
         guard let bundle = Bundle(path: bundlePath) else { return NSLocalizedString(self, comment: "") }
         let msg = NSLocalizedString(self, tableName: nil, bundle: bundle, value: "", comment: "")
         return msg
@@ -20,7 +20,7 @@ extension String{
 
 func UIImageHDBoundle(named: String?) -> UIImage? {
     guard let name = named else { return nil }
-    guard let bundlePath = Bundle(for: DDKitSwift.self).path(forResource: "DDKitSwiftCore", ofType: "bundle") else { return UIImage(named: name) }
+    guard let bundlePath = Bundle(for: DDKitSwift.self).path(forResource: "DDKitSwift", ofType: "bundle") else { return UIImage(named: name) }
     guard let bundle = Bundle(path: bundlePath) else { return UIImage(named: name) }
     return UIImage(named: name, in: bundle, compatibleWith: nil)
 }
@@ -32,21 +32,13 @@ public extension NSNotification.Name {
     static let DDKitSwiftClose = NSNotification.Name("DDKitSwiftClose")
 }
 
-public enum DisplayMode {
-    case none
-    case input(placeholder: String?, text: String?, endEdit: ((String)->Void)?)
-}
-
 public class DDKitSwift: NSObject {
     public static var UIConfig = DDKitSwiftUIConfig()
-    public static let DebugFolderPath = DDUtils.shared.createFileDirectory(in: .caches, directoryName: "zxkit")
 
     //MARK: Private
     private static var hasConfig = false
     private static var window: DDKitSwiftWindow?
     internal static var floatWindow: DDKitSwiftFloatWindow?
-    private static var floatChangeTimer: Timer?     //悬浮按钮的修改
-    private static var changeQueue = [(DDKitSwiftButtonConfig, DDKitSwiftPluginProtocol)]() //悬浮按钮修改的队列
     static var pluginList = [[DDKitSwiftPluginProtocol](), [DDKitSwiftPluginProtocol](), [DDKitSwiftPluginProtocol]()]
 }
 
@@ -78,7 +70,7 @@ public extension DDKitSwift {
         NotificationCenter.default.post(name: .DDKitSwiftPluginRegist, object: self.pluginList)
     }
 
-    static func show(_ mode: DisplayMode = .none) {
+    static func show() {
         if !hasConfig {
             self._initConfig()
         }
@@ -101,13 +93,6 @@ public extension DDKitSwift {
                 }
                 self.window?.isHidden = false
                 self.window?.reloadData()
-            }
-            //显示mode
-            switch mode {
-                case .none:
-                    break
-                case .input(let placeholder, let text, let endEdit):
-                    self.window?.showInput(placeholder: placeholder, text: text, complete: endEdit)
             }
         }
     }
@@ -133,12 +118,6 @@ public extension DDKitSwift {
                 }
                 self.floatWindow?.isHidden = false
             }
-            let count = DDLoggerSwift.getItemCount(type: .error)
-            if count == 0 {
-                self.floatWindow?.setBadge(value: nil, index: 3)
-            } else {
-                self.floatWindow?.setBadge(value: "\(count)", index: 3)
-            }
         }
     }
 
@@ -147,20 +126,15 @@ public extension DDKitSwift {
         DispatchQueue.main.async {
             self.window?.isHidden = true
             self.floatWindow?.isHidden = true
-            self.floatWindow?.menuButtonType = .default
-            self.floatChangeTimer?.invalidate()
-            self.floatChangeTimer = nil
         }
     }
     
-    static func updateFloatButton(config: DDKitSwiftButtonConfig, plugin: DDKitSwiftPluginProtocol) {
-        if let last = self.changeQueue.last, last.0 == config, last.1.pluginIdentifier == plugin.pluginIdentifier {
-            //如果和最后一次重复就不再添加
-            return
-        }
-        self.changeQueue.append((config, plugin))
-        //更新
-        self._floatButtonChange()
+    static func updateListItem(plugin: DDKitSwiftPluginProtocol, config: DDPluginItemConfig) {
+        self.window?.updateListItem(plugin: plugin, config: config)
+    }
+    
+    static func getCurrentNavigationVC() -> UINavigationController? {
+        return self.window?.currentNavVC
     }
 }
 
@@ -170,29 +144,7 @@ private extension DDKitSwift {
             return
         }
         self.hasConfig = true
+        //初始化内置插件
         self.regist(plugin: DDLoggerSwift.shared)
-    }
-    
-    static func _floatButtonChange() {
-        guard let firstQueue = self.changeQueue.first else { return }
-        if let floatWindow = self.floatWindow {
-            if self.floatChangeTimer == nil {
-                self.floatChangeTimer = Timer(timeInterval: 2, repeats: true, block: { timer in
-                    DispatchQueue.main.async {
-                        if self.changeQueue.isEmpty {
-                            //队列已循环完毕
-                            floatWindow.menuButtonType = .default
-                            self.floatChangeTimer?.invalidate()
-                            self.floatChangeTimer = nil
-                        } else {
-                            floatWindow.menuButtonType = .info(config: firstQueue.0, image: firstQueue.1.pluginIcon)
-                            self.changeQueue.removeFirst()
-                        }
-                    }
-                })
-                RunLoop.main.add(self.floatChangeTimer!, forMode: .common)
-                self.floatChangeTimer?.fire()
-            }
-        }
     }
 }

@@ -31,16 +31,6 @@ open class DDKitSwift_Netfox: DDKitSwiftPluginProtocol {
         NFX.sharedInstance().start()
     }
     
-    public func start() {
-        DDKitSwift.hide()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if !self.isRunning {
-                NFX.sharedInstance().start()
-            }
-            NFX.sharedInstance().show()
-        }
-    }
-    
     public var pluginIdentifier: String {
         return "com.ddkit.netfox"
     }
@@ -59,6 +49,16 @@ open class DDKitSwift_Netfox: DDKitSwiftPluginProtocol {
 
     public var isRunning: Bool {
         return NFX.sharedInstance().isStarted()
+    }
+    
+    public func start() {
+        DDKitSwift.hide()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if !self.isRunning {
+                NFX.sharedInstance().start()
+            }
+            NFX.sharedInstance().show()
+        }
     }
 
     public func stop() {
