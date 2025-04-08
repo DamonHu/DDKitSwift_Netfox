@@ -6,6 +6,13 @@
 
 The plugin for viewing network request logs in [DDKitSwift](https://github.com/DamonHu/DDKitSwift). relies on [NetFox](https://github.com/kasketis/netfox).
 
+## Regist
+
+```
+let tool = DDKitSwift_Netfox()
+DDKitSwift.regist(plugin: tool)
+```
+
 ## Preview
 
 ![NetFox Overview](https://raw.githubusercontent.com/kasketis/netfox/master/assets/overview1_5_3.gif)
